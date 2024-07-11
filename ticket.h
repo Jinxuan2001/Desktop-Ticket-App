@@ -11,7 +11,7 @@ class Ticket{
         string content; //description of problem described by generic user
         string tag; //tag for the type of problem
         string timeSubmitted; //time the user submitted the project
-        string timeAllotted; //number of minutes/hours needed to finish ticket, set by employee
+        float timeAllotted; //number of minutes/hours needed to finish ticket, set by employee
         string status; //current ticket status (under review, in progress, complete, etc)
         //create chat object
 
@@ -25,7 +25,7 @@ class Ticket{
             this->content = c;
             this->tag = t;
             this->timeSubmitted = "0";
-            this->timeAllotted = "UNDECIDED";
+            this->timeAllotted = 0;
             this->status = "Under Review";
             this->fromUser = u;
         };
@@ -43,7 +43,7 @@ class Ticket{
         void setTimeSubmitted(string timeS){
             timeSubmitted = timeS;
         };
-        void setTimeAllotted(string timeA){
+        void setTimeAllotted(float timeA){
             timeAllotted = timeA;
         };
         void setStatus(string s){
@@ -63,7 +63,7 @@ class Ticket{
         string getTimeSubmitted(){
             return timeSubmitted;
         };
-        string getTimeAlloted(){
+        float getTimeAlloted(){
             return timeAllotted;
         };
         string getStatus(){

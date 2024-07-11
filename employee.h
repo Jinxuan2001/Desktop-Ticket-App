@@ -2,10 +2,12 @@
 #define EMPLOYEE_H
 
 #include "user.h"
+#include "ticket.h"
+#include "calendar.h"
 
 class Employee : public User{
     private:
-        //Add Calander Object
+        Calendar personalCalendar = Calendar();
 
     public:
         Employee();
@@ -13,9 +15,14 @@ class Employee : public User{
             setUsernamePassword(u,p);
         };
 
+        bool addTicket(Ticket ticket){
+            personalCalendar.addTicket(ticket);
+            return true;
+        };
 
-        
-
+        void test(){
+            personalCalendar.printCalendar();
+        }
 };
 
 #endif
