@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "admin.h"
+
 #include "ticket.h"
-#include "employee.h"
-#include "generic.h"
 #include "user.h"
-using namespace std;
+#include "generic.h"
+#include "employee.h"
+#include "admin.h"
 
 void testObjects(){
     Admin adminAccount = Admin();

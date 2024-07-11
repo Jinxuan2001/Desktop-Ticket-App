@@ -10,11 +10,19 @@ class Admin : public User {
         std::vector<Employee> staffList;
 
     public:
-        Admin();
+        Admin(){
+            setUsernamePassword("ADMIN", "ADMIN"); //MUST CHANGE LATER
+        };
 
-        void addEmployee(std::string u, std::string p);
+        void addEmployee(std::string u, std::string p){
+            staffList.push_back(Employee(u,p));
+        };
 
-        void printStaff();
+        void printStaff(){
+            for(int i = 0; i < staffList.size(); i++){
+                staffList[i].test();
+            }
+        };
 };
 
 #endif

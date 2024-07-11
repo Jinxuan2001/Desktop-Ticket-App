@@ -20,23 +20,74 @@ class Ticket{
     
     public:
         Ticket();
-        Ticket(string ID, string c, string t, string u);
-        void setID(string ID);
-        void setContent(string c);
-        void setTag(string t);
-        void setTimeSubmitted(string timeS);
-        void setTimeAllotted(string timeA);
-        void setStatus(string s);
-        void setFromUser(string u);
-        string getContent();
-        string getTag();
-        string getTimeSubmitted();
-        string getTimeAlloted();
-        string getStatus();
-        string getFromUser();
-        string getAssignedEmployee();
-        string getID();
-        void printTicket();
+        Ticket(string ID, string c, string t, string u){
+            this->ticketID = ID;
+            this->content = c;
+            this->tag = t;
+            this->timeSubmitted = "0";
+            this->timeAllotted = "UNDECIDED";
+            this->status = "Under Review";
+            this->fromUser = u;
+        };
+
+        //Set Methods
+        void setID(string ID){
+            ticketID = ID;
+        };
+        void setContent(string c){
+            content = c;
+        };
+        void setTag(string t){
+            tag = t;
+        };
+        void setTimeSubmitted(string timeS){
+            timeSubmitted = timeS;
+        };
+        void setTimeAllotted(string timeA){
+            timeAllotted = timeA;
+        };
+        void setStatus(string s){
+            status = s;
+        };
+        void setFromUser(string u){
+            fromUser = u;
+        };
+        
+        //Get Methods
+        string getContent(){
+            return content;
+        };
+        string getTag(){
+            return tag;
+        };
+        string getTimeSubmitted(){
+            return timeSubmitted;
+        };
+        string getTimeAlloted(){
+            return timeAllotted;
+        };
+        string getStatus(){
+            return status;
+        };
+        string getFromUser(){
+            return fromUser;
+        };
+        string getAssignedEmployee(){
+            return assignedEmployee;
+        };
+        string getID(){
+            return ticketID;
+        };
+        
+        //Other
+        void printTicket(){
+            cout << "ID: " << ticketID << endl;
+            cout << "Tag: " << tag << endl;
+            cout << "Status: " << status << endl;
+            cout << "From User: " << fromUser << endl;
+            cout << "Content: " << content << endl;
+            cout << endl;
+        };
 
 };
 
