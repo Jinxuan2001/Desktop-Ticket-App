@@ -5,6 +5,7 @@
 #include "user.h"
 #include "generic.h"
 #include "employee.h"
+#include "hash.h"
 #include "admin.h"
 
 void testObjects(){
@@ -17,12 +18,23 @@ void testObjects(){
 }
 
 void testTicket(){
+    Hash hash;
     Generic testUser = Generic("User 1","1");
+    Admin admin = Admin();
     testUser.test();
     std::string content = "THIS IS A TEST. DO NOT BE ALARMED. THERE IS NO DANGER. BLAH BLAH BLAH";
     std::string tag = "Testing Tag";
     testUser.createTicket(content, tag);
-    testUser.printTickets();
+    vector<Ticket> ticketsToSubmit = testUser.retrieveTickets();
+    for (int i = 0; i < ticketsToSubmit.size(); i++) {
+        Ticket ticket = ticketsToSubmit[i];
+        string ID = hash.generateTicketID(ticket);
+        ticket.setID(ID);
+        admin.assignTime(ticket);
+        hash.storeTicket(ticket);
+    }
+
+    hash.printTickets();
 }
 
 void testCalendar(){
@@ -35,16 +47,16 @@ void testCalendar(){
     std::string user = "Dumb User";
 
     //Ticket Creation
-    Ticket test1 = Ticket("TestID1",content,tag,user);
-    Ticket test2 = Ticket("TestID2",content,tag,user);
-    Ticket test3 = Ticket("TestID3",content,tag,user);
-    Ticket test4 = Ticket("TestID4",content,tag,user);
-    Ticket test5 = Ticket("TestID5",content,tag,user);
-    Ticket test6 = Ticket("TestID6",content,tag,user);
-    Ticket test7 = Ticket("TestID7",content,tag,user);
-    Ticket test8 = Ticket("TestID8",content,tag,user);
-    Ticket test9 = Ticket("TestID9",content,tag,user);
-    Ticket test10 = Ticket("TestID10",content,tag,user);
+    Ticket test1 = Ticket(content,tag,user);
+    Ticket test2 = Ticket(content,tag,user);
+    Ticket test3 = Ticket(content,tag,user);
+    Ticket test4 = Ticket(content,tag,user);
+    Ticket test5 = Ticket(content,tag,user);
+    Ticket test6 = Ticket(content,tag,user);
+    Ticket test7 = Ticket(content,tag,user);
+    Ticket test8 = Ticket(content,tag,user);
+    Ticket test9 = Ticket(content,tag,user);
+    Ticket test10 = Ticket(content,tag,user);
 
     //Change Alloted Time
     test1.setTimeAllotted(5);

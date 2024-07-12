@@ -8,6 +8,7 @@
 #include "employee.h"
 #include "admin.h"
 #include "tests.h"
+#include "hash.h"
 
 
 
@@ -16,7 +17,9 @@ int main() {
     std::cout << "Testing" << std::endl;
     //runAllTests();
 
-    testCalendar();
+    //testCalendar();
+
+    testTicket();
 
     return 0;
 }

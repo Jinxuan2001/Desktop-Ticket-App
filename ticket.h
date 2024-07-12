@@ -2,15 +2,17 @@
 #define TICKET_H
 
 #include <string>
+#include <ctime>
 #include <iostream>
+#include <sstream>
 using namespace std;
 
-class Ticket{
+class Ticket {
     private:
         string ticketID; //automatically assigned ticket ID number
         string content; //description of problem described by generic user
         string tag; //tag for the type of problem
-        string timeSubmitted; //time the user submitted the project
+        float timeSubmitted; //time the user submitted the project
         float timeAllotted; //number of minutes/hours needed to finish ticket, set by employee
         string status; //current ticket status (under review, in progress, complete, etc)
         //create chat object
@@ -19,15 +21,25 @@ class Ticket{
         string assignedEmployee; //employee who is assigned to it
     
     public:
-        Ticket();
-        Ticket(string ID, string c, string t, string u){
-            this->ticketID = ID;
+        Ticket() {
+            this->ticketID = "ID";
+            this->content = "";
+            this->tag = "";
+            this->timeSubmitted = 0;
+            this->timeAllotted = 0;
+            this->status = "Under Review";
+            this->fromUser = "";
+            this->assignedEmployee = "temp";
+        }
+        Ticket(string c, string t, string u){
+            this->ticketID = "ID";
             this->content = c;
             this->tag = t;
-            this->timeSubmitted = "0";
+            this->timeSubmitted = 0;
             this->timeAllotted = 0;
             this->status = "Under Review";
             this->fromUser = u;
+            this->assignedEmployee = "UNDECIDED";
         };
 
         //Set Methods
@@ -40,7 +52,7 @@ class Ticket{
         void setTag(string t){
             tag = t;
         };
-        void setTimeSubmitted(string timeS){
+        void setTimeSubmitted(float timeS){
             timeSubmitted = timeS;
         };
         void setTimeAllotted(float timeA){
@@ -60,7 +72,7 @@ class Ticket{
         string getTag(){
             return tag;
         };
-        string getTimeSubmitted(){
+        float getTimeSubmitted(){
             return timeSubmitted;
         };
         float getTimeAlloted(){
