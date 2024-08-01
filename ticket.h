@@ -2,105 +2,48 @@
 #define TICKET_H
 
 #include <string>
-#include <ctime>
 #include <iostream>
 #include <sstream>
-using namespace std;
+#include <ctime>
 
 class Ticket {
-    private:
-        string ticketID; //automatically assigned ticket ID number
-        string content; //description of problem described by generic user
-        string tag; //tag for the type of problem
-        float timeSubmitted; //time the user submitted the project
-        float timeAllotted; //number of minutes/hours needed to finish ticket, set by employee
-        string status; //current ticket status (under review, in progress, complete, etc)
-        //create chat object
+private:
+    std::string id;
+    std::string content;
+    std::string tag;
+    std::string fromUser;
+    std::time_t timeSubmitted;
+    float timeAllotted;
 
-        string fromUser; //user who submitted the ticket
-        string assignedEmployee; //employee who is assigned to it
-    
-    public:
-        Ticket() {
-            this->ticketID = "ID";
-            this->content = "";
-            this->tag = "";
-            this->timeSubmitted = 0;
-            this->timeAllotted = 0;
-            this->status = "Under Review";
-            this->fromUser = "";
-            this->assignedEmployee = "temp";
-        }
-        Ticket(string c, string t, string u){
-            this->ticketID = "ID";
-            this->content = c;
-            this->tag = t;
-            this->timeSubmitted = 0;
-            this->timeAllotted = 0;
-            this->status = "Under Review";
-            this->fromUser = u;
-            this->assignedEmployee = "UNDECIDED";
-        };
+public:
+    Ticket() : id("UNKNOWN"), content(""), tag(""), fromUser(""), timeSubmitted(0), timeAllotted(0) {}
+    Ticket(std::string c, std::string t, std::string u)
+        : content(c), tag(t), fromUser(u), timeSubmitted(std::time(nullptr)), timeAllotted(0) {}
 
-        //Set Methods
-        void setID(string ID){
-            ticketID = ID;
-        };
-        void setContent(string c){
-            content = c;
-        };
-        void setTag(string t){
-            tag = t;
-        };
-        void setTimeSubmitted(float timeS){
-            timeSubmitted = timeS;
-        };
-        void setTimeAllotted(float timeA){
-            timeAllotted = timeA;
-        };
-        void setStatus(string s){
-            status = s;
-        };
-        void setFromUser(string u){
-            fromUser = u;
-        };
-        
-        //Get Methods
-        string getContent(){
-            return content;
-        };
-        string getTag(){
-            return tag;
-        };
-        float getTimeSubmitted(){
-            return timeSubmitted;
-        };
-        float getTimeAlloted(){
-            return timeAllotted;
-        };
-        string getStatus(){
-            return status;
-        };
-        string getFromUser(){
-            return fromUser;
-        };
-        string getAssignedEmployee(){
-            return assignedEmployee;
-        };
-        string getID(){
-            return ticketID;
-        };
-        
-        //Other
-        void printTicket(){
-            cout << "ID: " << ticketID << endl;
-            cout << "Tag: " << tag << endl;
-            cout << "Status: " << status << endl;
-            cout << "From User: " << fromUser << endl;
-            cout << "Content: " << content << endl;
-            cout << endl;
-        };
+    std::string getID() const { return id; }
+    void setID(const std::string& newID) { id = newID; }
 
+    std::string getTag() const { return tag; }
+    std::string getDate() const { return formatTime(timeSubmitted); }
+    std::string getITStaff() const { return fromUser; }
+
+    std::string getContent() const { return content; }
+    void setContent(const std::string& newContent) { content = newContent; }
+
+    std::string getFromUser() const { return fromUser; }
+    std::time_t getTimeSubmitted() const { return timeSubmitted; }
+    float getTimeAllotted() const { return timeAllotted; }
+    void setTimeAllotted(float t) { timeAllotted = t; }
+    void setTimeSubmitted(std::time_t t) { timeSubmitted = t; }
+
+    void printTicket() const {
+        std::cout << "ID: " << id << std::endl;
+        std::cout << "Content: " << content << std::endl;
+        std::cout << "Tag: " << tag << std::endl;
+        std::cout << "From: " << fromUser << std::endl;
+        std::cout << "Time Submitted: " << timeSubmitted << std::endl;
+        std::cout << "Time Allotted: " << timeAllotted << std::endl;
+    }
 };
 
-#endif
+#endif // TICKET_H

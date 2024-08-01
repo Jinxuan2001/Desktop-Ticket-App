@@ -1,53 +1,48 @@
-#ifndef DESKTOP_TICKET_APP_HASH_H
-#define DESKTOP_TICKET_APP_HASH_H
+#ifndef HASH_H
+#define HASH_H
 
 #include "ticket.h"
 #include <string>
-#include <ctime>
-#include <sstream>
 #include <unordered_map>
 #include <iostream>
-using namespace std;
 
 class Hash {
-    private:
-        string ID;
-        unordered_map<string, Ticket> tickets;
-    public:
+private:
+    std::unordered_map<std::string, Ticket> tickets;
 
-    //store and hash tickets
-    std::string generateTicketID(Ticket ticket) {
-        string username = ticket.getFromUser();
-        float timeSubmitted = ticket.getTimeSubmitted();
+public:
+    std::string generateTicketID(const Ticket& ticket) {
+        std::string username = ticket.getFromUser();
+        std::time_t timeSubmitted = ticket.getTimeSubmitted();
 
         // Hash the username
         std::hash<std::string> hasher;
         size_t hashedUsername = hasher(username);
 
         // Combine the hashed username and timestamp
-        std::string ticketID = std::to_string(hashedUsername) + to_string(timeSubmitted);
+        std::string ticketID = std::to_string(hashedUsername) + std::to_string(timeSubmitted);
         return ticketID;
     }
 
-    void storeTicket(Ticket ticket) {
+    void storeTicket(const Ticket& ticket) {
         tickets[ticket.getID()] = ticket;
     }
 
-    Ticket findTicket(string ID) {
+    Ticket findTicket(const std::string& ID) {
         if (tickets.find(ID) != tickets.end()) {
             return tickets[ID];
         }
         else {
-            cout << "Ticket ID cannot be found" << endl;
+            std::cerr << "Ticket ID cannot be found" << std::endl;
+            return Ticket();
         }
     }
 
-    void printTickets() {
-        auto iter = tickets.begin();
-        for (; iter != tickets.end(); iter++) {
-            iter->second.printTicket();
+    void printTickets() const {
+        for (const auto& pair : tickets) {
+            pair.second.printTicket();
         }
     }
 };
 
-#endif //DESKTOP_TICKET_APP_HASH_H
+#endif

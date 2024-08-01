@@ -7,19 +7,19 @@
 #include "generic.h"
 #include "employee.h"
 #include "admin.h"
-#include "tests.h"
+//#include "tests.h"
 #include "hash.h"
-
-
-
+#include "sfml_app.h"
 
 int main() {
     std::cout << "Testing" << std::endl;
+    // Uncomment to run tests
     //runAllTests();
-
     //testCalendar();
+    //testTicket();
 
-    testTicket();
+    SFMLApp app;
+    app.run();
 
     return 0;
 }

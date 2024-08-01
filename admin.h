@@ -15,23 +15,23 @@ public:
         setUsernamePassword("ADMIN", "ADMIN"); //MUST CHANGE LATER
     }
 
-    void addEmployee(std::string u, std::string p) {
+    void addEmployee(const std::string& u, const std::string& p) {
         staffList.push_back(Employee(u, p));
     }
 
-    void printStaff() {
-        for (int i = 0; i < staffList.size(); i++) {
-            staffList[i].test();
+    void printStaff() const {
+        for (const auto& staff : staffList) {
+            staff.test();
         }
     }
 
-    void assignTime(Ticket ticket) {
+    void assignTime(Ticket& ticket) {
         float time;
         ticket.printTicket();
-        cout << "Allotted time:";
-        cin >> time;
+        std::cout << "Allotted time:";
+        std::cin >> time;
         ticket.setTimeAllotted(time);
     }
-
 };
+
 #endif

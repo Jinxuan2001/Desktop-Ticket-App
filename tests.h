@@ -8,7 +8,7 @@
 #include "hash.h"
 #include "admin.h"
 
-void testObjects(){
+void testObjects() {
     Admin adminAccount = Admin();
     adminAccount.test();
     adminAccount.addEmployee("Employee 1", "1");
@@ -17,9 +17,9 @@ void testObjects(){
     adminAccount.printStaff();
 }
 
-void testTicket(){
+void testTicket() {
     Hash hash;
-    Generic testUser = Generic("User 1","1");
+    Generic testUser = Generic("User 1", "1");
     Admin admin = Admin();
     testUser.test();
     std::string content = "THIS IS A TEST. DO NOT BE ALARMED. THERE IS NO DANGER. BLAH BLAH BLAH";
@@ -37,7 +37,7 @@ void testTicket(){
     hash.printTickets();
 }
 
-void testCalendar(){
+void testCalendar() {
     Employee testEmployee = Employee("Staff 1", "1");
     testEmployee.test();
 
@@ -47,16 +47,16 @@ void testCalendar(){
     std::string user = "Dumb User";
 
     //Ticket Creation
-    Ticket test1 = Ticket(content,tag,user);
-    Ticket test2 = Ticket(content,tag,user);
-    Ticket test3 = Ticket(content,tag,user);
-    Ticket test4 = Ticket(content,tag,user);
-    Ticket test5 = Ticket(content,tag,user);
-    Ticket test6 = Ticket(content,tag,user);
-    Ticket test7 = Ticket(content,tag,user);
-    Ticket test8 = Ticket(content,tag,user);
-    Ticket test9 = Ticket(content,tag,user);
-    Ticket test10 = Ticket(content,tag,user);
+    Ticket test1 = Ticket(content, tag, user);
+    Ticket test2 = Ticket(content, tag, user);
+    Ticket test3 = Ticket(content, tag, user);
+    Ticket test4 = Ticket(content, tag, user);
+    Ticket test5 = Ticket(content, tag, user);
+    Ticket test6 = Ticket(content, tag, user);
+    Ticket test7 = Ticket(content, tag, user);
+    Ticket test8 = Ticket(content, tag, user);
+    Ticket test9 = Ticket(content, tag, user);
+    Ticket test10 = Ticket(content, tag, user);
 
     //Change Alloted Time
     test1.setTimeAllotted(5);
@@ -67,7 +67,7 @@ void testCalendar(){
     test6.setTimeAllotted(8);//day 4
     test7.setTimeAllotted(8);//day 5
     test8.setTimeAllotted(4); // week 2 day 1
-    test9.setTimeAllotted(4); 
+    test9.setTimeAllotted(4);
     test10.setTimeAllotted(5); // week 2 day 2
 
     //Insert into Calendar
@@ -86,7 +86,7 @@ void testCalendar(){
     testEmployee.test();
 }
 
-void runAllTests(){
+void runAllTests() {
     testObjects();
     testTicket();
 }
