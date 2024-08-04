@@ -15,6 +15,10 @@ class Employee : public User{
             setUsernamePassword(u,p);
         };
 
+        Employee(std::vector<std::string> u) {
+            setUsernamePassword(u[0], u[1]);
+        }
+
         bool addTicket(Ticket ticket){
             personalCalendar.addTicket(ticket);
             return true;

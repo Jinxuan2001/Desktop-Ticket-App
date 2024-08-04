@@ -17,6 +17,10 @@ class User {
             this->username = u;
             this->password = p;
         };
+        User(std::vector<std::string> u) {
+            this->username = u[0];
+            this->password = u[1];
+        }
         bool login(std::string input){
             //TO DO: USER AUTHENTICATION
             return true; //CHANGE

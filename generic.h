@@ -13,6 +13,9 @@ class Generic : public User {
         Generic(std::string u, std::string p) {
             setUsernamePassword(u,p);
         }
+        Generic(std::vector<string> u) {
+            setUsernamePassword(u[0], u[1]);
+        }
 
         void createTicket(std::string c, std::string t) {
             string u = getUsername();

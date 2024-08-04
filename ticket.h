@@ -41,6 +41,16 @@ class Ticket {
             this->fromUser = u;
             this->assignedEmployee = "UNDECIDED";
         };
+        Ticket(vector<string> u) {
+            this->ticketID = u[0];
+            this->content = u[1];
+            this->tag = u[2];
+            this->timeSubmitted = u[3];
+            this->timeAllotted = u[4];
+            this->status = u[5];
+            this->fromUser = u[6];
+            this->assignedEmployee = u[7];
+        }
 
         //Set Methods
         void setID(string ID){
