@@ -14,6 +14,9 @@ public:
     Admin() {
         setUsernamePassword("ADMIN", "ADMIN"); //MUST CHANGE LATER
     }
+    Admin(std::string u, std::string p) {
+        setUsernamePassword(u, p);
+    }
 
     void addEmployee(std::string u, std::string p) {
         staffList.push_back(Employee(u, p));

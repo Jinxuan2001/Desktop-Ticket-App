@@ -10,10 +10,10 @@
 using namespace std;
 
 class Hash {
-    private:
-        string ID;
-        unordered_map<string, Ticket> tickets;
-    public:
+private:
+    string ID;
+    unordered_map<string, Ticket> tickets;
+public:
 
     //store and hash tickets
     std::string generateTicketID(Ticket ticket) {
