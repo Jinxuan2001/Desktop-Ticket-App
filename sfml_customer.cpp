@@ -1,10 +1,14 @@
 #include "sfml_customer.h"
 #include "hash.h"
+#include "helper.h"
+#include "ticket.h"
+
 #include <sstream>
 #include <iterator>
+#include <string>
 
-SFMLCustomer::SFMLCustomer(std::vector<Ticket>& tickets, User& user)
-    : window(sf::VideoMode(800, 600), "Customer Window"), tickets(tickets), user(user),
+SFMLCustomer::SFMLCustomer(std::vector<Ticket>& tickets)
+    : window(sf::VideoMode(800, 600), "Customer Window"), tickets(tickets),
     viewState(ViewState::TicketList), isTagActive(false), isContentActive(false), showCursor(true) {
     if (!font.loadFromFile("arial.ttf")) {
         // Handle error
@@ -144,13 +148,17 @@ void SFMLCustomer::update() {
     else {
         contentInput.setString(content);
     }
+    
+    // ******** Set time disabled ********
 
+    /*
     if (isTimeAllottedActive) {
         timeAllottedInput.setString(timeAllotted + (showCursor ? "|" : ""));
     }
     else {
         timeAllottedInput.setString(timeAllotted);
     }
+    */
 }
 
 void SFMLCustomer::render() {
@@ -205,11 +213,14 @@ void SFMLCustomer::renderTicketCreation() {
     window.draw(contentRect);
     window.draw(tagInput);
     window.draw(contentInput);
-    window.draw(timeAllottedLabel);
-    window.draw(timeAllottedRect);
-    window.draw(timeAllottedInput);
-    window.draw(submitButton);
-    window.draw(submitButtonText);
+
+    // ******** Set time disabled ********
+
+    // window.draw(timeAllottedLabel);
+    // window.draw(timeAllottedRect);
+    // window.draw(timeAllottedInput);
+    // window.draw(submitButton);
+    // window.draw(submitButtonText);
 }
 
 void SFMLCustomer::handleMouseClick(sf::Vector2i position) {
@@ -233,11 +244,18 @@ void SFMLCustomer::handleMouseClick(sf::Vector2i position) {
             isContentActive = true;
             isTimeAllottedActive = false;
         }
+
+        // ******** Set time disabled ********
+        
+        /*
         else if (timeAllottedRect.getGlobalBounds().contains(static_cast<sf::Vector2f>(position))) {
             isTagActive = false;
             isContentActive = false;
             isTimeAllottedActive = true;
         }
+        */
+
+
         else if (submitButton.getGlobalBounds().contains(static_cast<sf::Vector2f>(position))) {
             createTicket();
             viewState = ViewState::TicketList;
@@ -272,6 +290,10 @@ void SFMLCustomer::handleTextEntered(sf::Event::TextEvent textEvent) {
             content += static_cast<char>(textEvent.unicode);
         }
     }
+
+    // ******** Set time disabled ********
+
+    /*
     else if (isTimeAllottedActive) {
         if (textEvent.unicode == '\b' && !timeAllotted.empty()) {
             timeAllotted.pop_back();
@@ -280,15 +302,17 @@ void SFMLCustomer::handleTextEntered(sf::Event::TextEvent textEvent) {
             timeAllotted += static_cast<char>(textEvent.unicode);
         }
     }
+    */
 }
 
 void SFMLCustomer::createTicket() {
-    if (!tag.empty() && !content.empty() && !timeAllotted.empty()) {
-        Ticket newTicket(content, tag, user.getUsername());
-        newTicket.setTimeAllotted(std::stof(timeAllotted));
-        Hash hash;
-        std::string ticketID = hash.generateTicketID(newTicket);
-        newTicket.setID(ticketID);
-        tickets.push_back(newTicket);
+    if (!tag.empty() && !content.empty()) {
+        // std::string ticketID = hash.generateTicketID(newTicket);
+
+        // Solution(temp): get username from the tickets[0]
+        string username = tickets[0].getFromUser();
+
+        Ticket tempT = Ticket(content, tag, username);
+        addTicketHelper(tempT);
     }
 }

@@ -9,7 +9,7 @@
 
 class SFMLApp {
 public:
-    SFMLApp(std::vector<User>& users, std::vector<Employee>& staffs, std::vector<Ticket>& tickets);
+    SFMLApp();
     void run();
 
 private:
@@ -20,7 +20,6 @@ private:
     void handleUserInput(sf::Keyboard::Key key, bool isPressed);
     void handleMouseClick(sf::Vector2i position);
     void handleLogin();
-    void checkCustomer(const User& user); // New function declaration
     void showErrorMessage(const std::string& message);
 
     void renderLoginPanel();
@@ -70,17 +69,13 @@ private:
     sf::Text signUpStaffIDInput;
     sf::RectangleShape signUpStaffIDRect;
 
-    bool isSignUpUsernameActive;
-    bool isSignUpPasswordActive;
-    bool isSignUpStaffIDActive;
+    // bool isSignUpUsernameActive;
+    // bool isSignUpPasswordActive;
+    // bool isSignUpStaffIDActive;
 
     std::string signUpUsername;
     std::string signUpPassword;
     std::string signUpStaffID;
-
-    std::vector<User>& users;
-    std::vector<Employee>& staffs;
-    std::vector<Ticket>& tickets;
 
     // Additional UI elements and state variables
 };

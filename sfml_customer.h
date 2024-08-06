@@ -9,7 +9,7 @@
 
 class SFMLCustomer {
 public:
-    SFMLCustomer(std::vector<Ticket>& tickets, User& user);
+    SFMLCustomer(std::vector<Ticket>& tickets);
 
     void runCustomer();
 
@@ -38,7 +38,6 @@ private:
     sf::Text logOutButtonText;
 
     std::vector<Ticket>& tickets;
-    User& user;
 
     ViewState viewState;
     bool isTagActive;

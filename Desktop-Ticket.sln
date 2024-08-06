@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Desktop-Ticket", "Desktop-Ticket.vcxproj", "{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Debug|x64.ActiveCfg = Debug|x64
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Debug|x64.Build.0 = Debug|x64
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Debug|x86.ActiveCfg = Debug|Win32
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Debug|x86.Build.0 = Debug|Win32
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Release|x64.ActiveCfg = Release|x64
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Release|x64.Build.0 = Release|x64
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Release|x86.ActiveCfg = Release|Win32
+		{CAF0457B-895A-435D-B086-6F6B6B7A2DB6}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F47B58C-8413-4AB6-B63C-5B9DF2D2CB7A}
+	EndGlobalSection
+EndGlobal

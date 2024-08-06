@@ -101,7 +101,7 @@ bool setTicket(Ticket t, std::string time, std::string username) {
 	float temptime = stof(time); //IN MINUTES
 	temptime = temptime / 60;
 
-	return updateTicket(t.getID(),t.getTag(),t.getStatus(),t.getFromUser(),username,std::to_string(temptime),t.getContent()
+	return updateTicket(t.getID(), t.getTag(), t.getStatus(), t.getFromUser(), username, std::to_string(temptime), t.getContent());
 
 }
 

@@ -6,11 +6,11 @@
 #include "ticket.h"
 #include "employee.h"
 #include "calendar.h"
-#include "day.h"
+#include "helper.h"
 
 class SFMLItStaff {
 public:
-    SFMLItStaff(std::vector<Ticket>& tickets, Employee& itStaff);
+    SFMLItStaff(std::vector<Ticket>& tickets, Employee staff);
     void runItStaff();
 
 private:
@@ -20,15 +20,42 @@ private:
     void setupCalendar();
     void renderCalendar();
     void handleMouseClick(sf::Vector2i position);
+    void renderTicketList();
+
+    void switchToAssignTicketPage();
+    void switchToCalendarPage();
+
 
     sf::RenderWindow window;
     sf::Font font;
     sf::RectangleShape logOutButton;
     sf::Text logOutButtonText;
+    sf::RectangleShape assignTicketButton;
+    sf::Text assignTicketButtonText;
 
-    std::vector<Ticket>& tickets;
-    Employee& itStaff;
+    sf::RectangleShape closeButton;
+    sf::Text closeButtonText;
+
+
+    std::vector<Ticket> tickets;
+    Employee& staff;
     Calendar personalCalendar;
+    bool showAssignTicketPage = false;
+
+    sf::RectangleShape assignButton;
+    sf::Text assignButtonText;
+    sf::RectangleShape assignPanel;
+    sf::Text workTimeText;
+    sf::RectangleShape assignPanelButton;
+    sf::Text assignPanelButtonText;
+    sf::RectangleShape closePanelButton;
+    sf::Text closePanelButtonText;
+    bool showAssignPanel = false;
+    std::string workTimeInput;
+    bool isWorkTimeActive = false;
+
+    Ticket tempT;
+
 };
 
 #endif // SFML_ITSTAFF_H

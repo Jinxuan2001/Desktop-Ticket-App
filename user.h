@@ -31,7 +31,7 @@ class User {
         void test(){
             std::cout << "Username: " + username << std::endl;
             std::cout << "Password: " + password << std::endl;
-            std::cout << endl;
+            std::cout << std::endl;
         };
 };
 

@@ -1,16 +1,23 @@
 #include "sfml_app.h"
 #include "sfml_customer.h"
 #include "sfml_itStaff.h"
+#include "helper.h"
+#include "employee.h"
+#include "connector.h"
+#include "employee.h"
 
 #include <iostream>
 #include <iterator>
 #include <vector>
+#include <string>
 
-
-SFMLApp::SFMLApp(std::vector<User>& users, std::vector<Employee>& staffs, std::vector<Ticket>& tickets) 
-    : window(sf::VideoMode(800, 600), "Desktop Ticket App"), state(AppState::Login), 
-      isUsernameActive(false), isPasswordActive(false), showCursor(true), 
-      users(users), staffs(staffs),tickets(tickets) {
+SFMLApp::SFMLApp()
+    : window(sf::VideoMode(800, 600), "Desktop Ticket App"),
+    state(AppState::Login),
+    isUsernameActive(false),
+    isPasswordActive(false),
+    showCursor(true)
+{
     if (!font.loadFromFile("arial.ttf")) {
         // Handle error
     }
@@ -174,7 +181,10 @@ void SFMLApp::processEvents() {
                     passwordInput.setString(password + (showCursor ? "|" : ""));
                 }
             }
-            else if (state == AppState::SignUp) {
+
+            // ******** sign up function disabled ********
+
+           /* else if (state == AppState::SignUp) {
                 if (isSignUpUsernameActive) {
                     if (event.text.unicode == '\b' && !signUpUsername.empty()) {
                         signUpUsername.pop_back();
@@ -202,7 +212,11 @@ void SFMLApp::processEvents() {
                     }
                     signUpStaffIDInput.setString(signUpStaffID + (showCursor ? "|" : ""));
                 }
-            }
+                
+            } */
+
+
+
             break;
         case sf::Event::MouseButtonPressed:
             handleMouseClick(sf::Mouse::getPosition(window));
@@ -234,7 +248,10 @@ void SFMLApp::update() {
             passwordInput.setString(password);
         }
     }
-    else if (state == AppState::SignUp) {
+
+    // ******** sign up function disabled ********
+
+    /* else if (state == AppState::SignUp) {
         if (isSignUpUsernameActive) {
             signUpUsernameInput.setString(signUpUsername + (showCursor ? "|" : ""));
         }
@@ -255,6 +272,7 @@ void SFMLApp::update() {
             signUpStaffIDInput.setString(signUpStaffID);
         }
     }
+    */
 }
 
 void SFMLApp::render() {
@@ -263,7 +281,7 @@ void SFMLApp::render() {
         renderLoginPanel();
     }
     else if (state == AppState::SignUp) {
-        renderSignUpPanel();
+        // renderSignUpPanel();
     }
     window.display();
 }
@@ -273,38 +291,43 @@ void SFMLApp::handleUserInput(sf::Keyboard::Key key, bool isPressed) {
 }
 
 void SFMLApp::handleLogin() {
-    for (auto it = users.begin(); it != users.end(); ++it) {
-        if (it->getUsername() == username) {
-            if (it->login(password)) {
-                // logged in as Customer
-                SFMLCustomer customerWindow(tickets,*it);
-                customerWindow.runCustomer();
-                return;
-            }
-            else {
-                showErrorMessage("Incorrect password!");
-                return;
-            }
-        }
+    std::vector<std::string> test;
+    test = loginhelper(username, password);
+
+    for (int i = 0; i < test.size(); i++) {
+        std::cout << test[i] << std::endl;
     }
 
-    for (auto it = staffs.begin(); it != staffs.end(); ++it) {
-        if (it->getUsername() == username) {
-            if (it->login(password)) {
-                // logged in as Customer
-                SFMLItStaff itStaffWindow(tickets, *it);
-                itStaffWindow.runItStaff();
-                return;
-            }
-            else {
-                showErrorMessage("Incorrect password!");
-                return;
-            }
-        }
+    if (test[0] == "Failed") {
+        //login fail
+        showErrorMessage("Login Failed!");
     }
-    showErrorMessage("Username doesn't exist!");
+    else if (test[2] == "IT") {
+        // login IT staff
+        Employee temp = employeeType(username, password);
+        
+        std::vector<Ticket> tickets = temp.getUnassigned();
+
+        SFMLItStaff itStaffWindow(tickets, temp);
+        itStaffWindow.runItStaff();
+
+    }
+    else if (test[2] == "ADMIN") {
+        // login admin
+    }
+    else {
+        // login customer
+        Generic temp = genericType(username, password);
+
+        std::vector<Ticket> tempV = temp.retrieveTickets();
+
+        SFMLCustomer customerWindow(tempV);
+        customerWindow.runCustomer();
+    }
 }
 
+// Issue: Username not passed to customer window
+// 
 
 
 void SFMLApp::handleMouseClick(sf::Vector2i position) {
@@ -320,6 +343,10 @@ void SFMLApp::handleMouseClick(sf::Vector2i position) {
         else if (loginButton.getGlobalBounds().contains(static_cast<sf::Vector2f>(position))) {
             handleLogin();
         }
+
+        // ******** sign up function disabled ********
+
+        /*
         else if (signUpButton.getGlobalBounds().contains(static_cast<sf::Vector2f>(position))) {
             state = AppState::SignUp;
             isSignUpUsernameActive = false;
@@ -332,11 +359,17 @@ void SFMLApp::handleMouseClick(sf::Vector2i position) {
             signUpPasswordInput.setString("");
             signUpStaffIDInput.setString("");
         }
+        */
+
         else {
             isUsernameActive = false;
             isPasswordActive = false;
         }
     }
+
+    // ******** sign up function disabled ********
+
+    /*
     else if (state == AppState::SignUp) {
         if (signUpUsernameRect.getGlobalBounds().contains(static_cast<sf::Vector2f>(position))) {
             isSignUpUsernameActive = true;
@@ -388,10 +421,9 @@ void SFMLApp::handleMouseClick(sf::Vector2i position) {
             isSignUpStaffIDActive = false;
         }
     }
+
+    */
 }
-
-
-
 void SFMLApp::renderLoginPanel() {
     window.draw(loginTitle);
     window.draw(usernameLabel);
@@ -402,8 +434,8 @@ void SFMLApp::renderLoginPanel() {
     window.draw(passwordInput);
     window.draw(loginButton);
     window.draw(loginButtonText);
-    window.draw(signUpButton);
-    window.draw(signUpButtonText);
+    // window.draw(signUpButton);
+    // window.draw(signUpButtonText);
 }
 void SFMLApp::renderSignUpPanel() {
     window.draw(signUpTitle);
