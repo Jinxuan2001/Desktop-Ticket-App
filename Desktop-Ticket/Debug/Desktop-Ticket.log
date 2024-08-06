@@ -1,0 +1,142 @@
+﻿  main.cpp
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(31,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(40,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(58,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(59,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(70,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(71,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(59,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(66,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(72,55): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(85,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(87,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(23,33): warning C4244: 'argument': conversion from 'time_t' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(28,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\admin.h(26,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(125,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(153,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(185,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(209,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(234,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(21,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(51,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(64,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(78,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\tests.h(29,23): warning C4018: '<': signed/unsigned mismatch
+  sfml_app.cpp
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(31,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(40,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(58,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(59,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(70,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(71,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(59,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(66,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(72,55): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(85,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(87,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(23,33): warning C4244: 'argument': conversion from 'time_t' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(28,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\admin.h(26,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(125,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(153,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(185,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(209,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(234,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(21,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(51,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(64,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(78,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_app.cpp(297,23): warning C4018: '<': signed/unsigned mismatch
+  sfml_customer.cpp
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(31,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(40,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(58,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(59,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(70,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(71,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(59,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(66,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(72,55): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(85,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(87,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(23,33): warning C4244: 'argument': conversion from 'time_t' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(28,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\admin.h(26,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(125,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(153,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(185,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(209,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(234,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(21,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(51,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(64,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(78,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_customer.cpp(180,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_customer.cpp(186,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  sfml_itStaff.cpp
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(31,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(40,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(58,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(59,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(70,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\day.h(71,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(59,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(66,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(72,55): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(85,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\calendar.h(87,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(23,33): warning C4244: 'argument': conversion from 'time_t' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\generic.h(28,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\admin.h(26,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(125,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(153,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(185,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(209,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\connector.h(234,11): warning C4101: 'er': unreferenced local variable
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(21,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(51,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(64,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\helper.h(78,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(137,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(143,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(154,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(160,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:         with
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:         [
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:             T=unsigned int
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:         ]
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:         and
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:         [
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:             T=float
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(189,75): warning C4244:         ]
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:         with
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:         [
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:             T=unsigned int
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:         ]
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:         and
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:         [
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:             T=float
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(209,78): warning C4244:         ]
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\sfml_itStaff.cpp(274,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  sfml_showTicket.cpp
+  Generating Code...
+  shell.c
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27262,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27705,35): error C2001: newline in constant
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27706,5): error C2143: syntax error: missing ';' before 'const'
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27720,11): error C2065: 'zBom': undeclared identifier
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27720,16): warning C4047: '=': 'int' differs in levels of indirection from 'const char *'
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27787,13): error C2065: 'zBom': undeclared identifier
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27787,20): error C2065: 'zBom': undeclared identifier
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27787,20): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27787,20): warning C4024: 'oPutsUtf8': different types for formal and actual parameter 1
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27800,13): error C2065: 'zBom': undeclared identifier
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27800,20): error C2065: 'zBom': undeclared identifier
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27800,20): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+C:\Users\Lucca\Desktop\openUI_repo\Desktop-Ticket-App\shell.c(27800,20): warning C4024: 'oPutsUtf8': different types for formal and actual parameter 1
+  sqlite3.c
+  Generating Code...

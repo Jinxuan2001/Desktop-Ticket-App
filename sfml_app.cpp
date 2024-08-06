@@ -1,3 +1,11 @@
+/*
+ * The code within this file has been modified from the Tutorials for SFML 2.6.
+ * For original tutorials and more information about SFML, visit:
+ * https://www.sfml-dev.org/tutorials/2.6/
+ */
+
+
+
 #include "sfml_app.h"
 #include "sfml_customer.h"
 #include "sfml_itStaff.h"

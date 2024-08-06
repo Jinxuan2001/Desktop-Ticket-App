@@ -41,16 +41,6 @@ public:
         this->fromUser = u;
         this->assignedEmployee = "UNDECIDED";
     };
-    Ticket(string id, string c, string tag, string time, string s, string user, string staff) {
-        this->ticketID = id;
-        this->content = c;
-        this->tag = time;
-        this->timeSubmitted = 0;
-        this->timeAllotted = std::stof(time);
-        this->status = s;
-        this->fromUser = user;
-        this->assignedEmployee = staff;
-    };
 
     //Set Methods
     void setID(string ID) {
