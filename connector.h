@@ -6,6 +6,16 @@
 #include <iostream>
 #include <vector>
 
+/*
+This file primarily used content modified from a geeksforgeeks guide on C and C++ SQL Queries.
+The website for the guide used is here:
+https://www.geeksforgeeks.org/sql-using-c-c-and-sqlite/
+
+The logic used after the SQL Queries is original.
+*/
+
+
+//Used to connect with the database
 sqlite3* connectDB() {
 	sqlite3* db;;
     char* zErrMsg = 0;
@@ -318,9 +328,7 @@ bool updateCalandar(std::string username, std::string id) {
     //TO DO
 }
 
-//delete methods
-
-//TO DO
+//Initial Set up of database. Do not run unless you want to reestablish a new clean database
 
 void init() {
     sqlite3* db = connectDB();
@@ -386,6 +394,7 @@ void init() {
     sqlite3_close(db);
 
     //adding dummy data
+    //Remove dummy data if you want an empty database
 
     //Generic Users
     addUser("User1", "GP1", "Generic");
