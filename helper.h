@@ -3,8 +3,6 @@
 
 #include <string>
 #include <vector>
-
-
 #include "ticket.h"
 #include "calendar.h"
 #include "user.h"
@@ -12,6 +10,12 @@
 #include "admin.h"
 #include "employee.h"
 #include "connector.h"
+
+/*
+This file is to be used to help connect the UI and the database
+All code is original
+*/
+
 
 std::vector<Ticket> getUnassignedTicketsHelper() {
 
